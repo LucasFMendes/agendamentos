@@ -40,6 +40,6 @@ bash
 Copiar
 Editar
 php -S localhost:8000 -t public
-Acesse http://localhost:8000 no navegador.
+Acesse http://localhost:8000/public no navegador.
 
 Contribuições são bem-vindas!
