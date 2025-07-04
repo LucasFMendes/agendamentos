@@ -1,9 +1,16 @@
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Agenda de Agendamentos</title>
-  <link rel="stylesheet" href="css/estilo.css">
+  <title>Lista de Agendamentos</title>
+  <link rel="stylesheet" href="../public/css/estilo.css" />
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -37,10 +44,11 @@
   </style>
 </head>
 <body>
-  <h1>Agenda de Agendamentos</h1>
+  <h1>Lista de Agendamentos</h1>
   <div class="menu">
-    <a href="../backend/criar.php">➕ Criar Novo Agendamento</a>
-    <a href="../backend/listar.php">📋 Listar Agendamentos</a>
+<a href="/backend/criar.php">Criar agendamentos</a>
+<a href="/backend/listar.php">Lista de agendamentos</a>
+
   </div>
 </body>
 </html>

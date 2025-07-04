@@ -1,14 +1,8 @@
 <?php
-// conexão básica com MySQL
-$host = 'localhost';
-$user = 'root';
-$senha = '';
-$banco = 'agenda_maria';
+$conn = new mysqli("127.0.0.1", "root", "", "agenda_maria"); // Altere o nome do banco de dados para 'agenda_maria'
 
-$conn = new mysqli($host, $user, $senha, $banco);
-
-if ($conn->connect_error) {
-  die("Deu ruim na conexão: " . $conn->connect_error);
+if ($conn->connect_errno) {
+    echo "Falha ao conectar: " . $conn->connect_error;
+    exit();
 }
 ?>
-

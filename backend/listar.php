@@ -1,4 +1,10 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+<?php
 include 'conexao.php';
 
 $sql = "SELECT * FROM agendamentos ORDER BY data_inicial DESC";
@@ -24,7 +30,7 @@ $result = $conn->query($sql);
         <th>Cliente</th>
         <th>Data Inicial</th>
         <th>Data Final</th>
-      </tr>
+        <th>Ações</th> </tr>
       <?php while($row = $result->fetch_assoc()): ?>
       <tr>
         <td><?= $row['id'] ?></td>
@@ -33,6 +39,10 @@ $result = $conn->query($sql);
         <td><?= htmlspecialchars($row['nome_cliente']) ?></td>
         <td><?= $row['data_inicial'] ?></td>
         <td><?= $row['data_final'] ?></td>
+        <td>
+            <a href="editar.php?id=<?= $row['id'] ?>">Editar</a> |
+            <a href="excluir.php?id=<?= $row['id'] ?>" onclick="return confirm('Tem certeza que deseja excluir este agendamento?')">Excluir</a>
+        </td>
       </tr>
       <?php endwhile; ?>
     </table>

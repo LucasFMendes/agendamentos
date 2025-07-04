@@ -1,3 +1,5 @@
+CREATE DATABASE agendamentos;
+
 CREATE DATABASE IF NOT EXISTS agenda_maria;
 USE agenda_maria;
 
