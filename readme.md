@@ -41,6 +41,9 @@ Copiar
 Editar
 
 php -S localhost:8000
-Acesse http://localhost:8000/public no navegador.
+
+Acesse 
+
+http://localhost:8000/public no navegador.
 
 Contribuições são bem-vindas!
