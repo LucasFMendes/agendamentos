@@ -39,7 +39,7 @@ Rode o servidor PHP:
 bash
 Copiar
 Editar
-php -S localhost:8000 -t public
+php -S localhost:8000
 Acesse http://localhost:8000/public no navegador.
 
 Contribuições são bem-vindas!
